@@ -6,8 +6,8 @@ program
   .option('--width <width>')
   .option('--height <height>')
   .action(async (uri, cmd) => {
-    const width = (program.width ? Number(program.width) : 640);
-    const height = (program.height ? Number(program.height) : 480);
+    const width = (cmd.width ? Number(cmd.width) : 640);
+    const height = (cmd.height ? Number(cmd.height) : 480);
 
     const app = await carlo.launch({
       width: width,
