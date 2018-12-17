@@ -3,8 +3,8 @@ const carlo = require('carlo');
 
 program
   .arguments('<uri>')
-  .option('-w, --width <width>')
-  .option('-h --height <height>')
+  .option('--width <width>')
+  .option('--height <height>')
   .action(async (uri, cmd) => {
     const width = (program.width ? Number(program.width) : 640);
     const height = (program.height ? Number(program.height) : 480);
